@@ -1887,7 +1887,7 @@ def euclide_etendu(L1, L2):
                      - on enlève tous les zeros (de bourage) devant la liste <br>
                      - on se débarrasse de toutes les virgules ex: 1.0 devient 1 (sinon ca devait probablement poser problème à la fonction liste_vers_texte)</p>
 
-                  <h2>Ajout des zeros pouvant manquer pour le passage en code ASCCI, en debut du message</h2>
+                  <h2>Ajout des zeros pouvant manquer pour le passage en code ASCII, en debut du message</h2>
 
                   <p>Avant de convertir le message dechiffré en texte nous devons traiter les zéros qui sont présents en debut de liste. En effet: le passage du texte en liste se fait en associant à chaque caractère 3 chiffres.Ensuite on découpe le message en liste de taille len(n)-1, si la taille de la liste découpée ne divise pas la taille du message, alors on doit rajouter des zéros au début du message mais alors comment différencier les zéros ajoutés pour le besoin de découpage et ceux ressortant du codage ASCII. La solution est de ne pas s’en préoccuper le long du chiffrement et déchiffrement mais qu’à la fin on supprime tous les zéros. Comme codage ASCCI la taille du message est divisible par 3 on peut ainsi rajouter les zéros manquant (au début du message).
                   <details class="source">
